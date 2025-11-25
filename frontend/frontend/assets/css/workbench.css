@@ -1,0 +1,312 @@
+/* Workbench Milestone Board Styles */
+.milestone-board {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.milestone-board h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--gray-900);
+}
+
+/* Slider Controls */
+.milestone-slider-controls {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.milestone-slider-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--gray-300);
+    color: var(--gray-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.milestone-slider-btn:hover {
+    background: var(--primary-1);
+    color: white;
+    border-color: var(--primary-1);
+    box-shadow: var(--shadow-md);
+}
+
+.milestone-slider-btn:active {
+    transform: scale(0.95);
+}
+
+/* Milestone Columns Container */
+.milestone-columns-container {
+    position: relative;
+    margin-top: 16px;
+}
+
+.milestone-columns {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 16px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-300) var(--gray-100);
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.milestone-columns::-webkit-scrollbar {
+    height: 6px;
+}
+
+.milestone-columns::-webkit-scrollbar-track {
+    background: var(--gray-100);
+    border-radius: var(--radius-full);
+}
+
+.milestone-columns::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: var(--radius-full);
+}
+
+.milestone-column {
+    flex: 0 0 280px;
+    background: var(--gray-100);
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    min-height: 400px;
+    box-shadow: var(--shadow-sm);
+}
+
+.milestone-column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.milestone-column-header h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.milestone-count {
+    background: white;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-600);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Milestone Card Styles */
+.milestone-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    max-height: calc(100% - 60px);
+}
+
+.milestone-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    border: 1px solid var(--gray-200);
+    font-size: 14px;
+}
+
+.milestone-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-1);
+}
+
+.milestone-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.milestone-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-900);
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+.milestone-card-badge {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 4px 8px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Progress Bar Styles */
+.milestone-progress-section {
+    margin-bottom: 12px;
+}
+
+.milestone-card-desc {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.milestone-card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--gray-500);
+    margin-bottom: 12px;
+}
+
+.milestone-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Files Section */
+.milestone-card-files {
+    margin-bottom: 12px;
+    padding: 8px;
+    background: var(--gray-50);
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+}
+
+.milestone-file-count {
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
+/* Actions Section */
+.milestone-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.milestone-card-actions .btn {
+    font-size: 12px;
+    padding: 8px 16px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Button Variants */
+.btn-small {
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .milestone-board h3 {
+        font-size: 18px;
+    }
+    
+    .milestone-column {
+        flex: 0 0 260px;
+        padding: 12px;
+    }
+    
+    .milestone-card {
+        padding: 12px;
+        font-size: 13px;
+    }
+    
+    .milestone-card-title {
+        font-size: 14px;
+    }
+    
+    .milestone-card-desc {
+        font-size: 12px;
+    }
+    
+    .milestone-card-meta {
+        font-size: 11px;
+    }
+    
+    .milestone-card-actions .btn {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .milestone-columns {
+        gap: 12px;
+        padding: 12px 0;
+    }
+    
+    .milestone-column {
+        flex: 0 0 240px;
+        min-height: 300px;
+    }
+    
+    .milestone-column-header {
+        margin-bottom: 12px;
+    }
+    
+    .milestone-column-header h4 {
+        font-size: 13px;
+    }
+    
+    .milestone-count {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    .milestone-card {
+        padding: 10px;
+    }
+    
+    .milestone-card-title {
+        font-size: 13px;
+    }
+    
+    .milestone-card-badge {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+}
+
+/* Dragging Styles */
+.milestone-card.dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+}
+
+.milestone-cards.drag-over {
+    background: rgba(99, 102, 241, 0.1);
+    border: 2px dashed var(--primary-1);
+    border-radius: var(--radius-lg);
+}
