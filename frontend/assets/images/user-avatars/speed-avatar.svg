@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 背景 -->
+  <circle cx="64" cy="64" r="64" fill="#10B981"/>
+  
+  <!-- 头部 -->
+  <circle cx="64" cy="52" r="28" fill="#FDE68A"/>
+  
+  <!-- 眼睛 -->
+  <circle cx="54" cy="46" r="5" fill="#1F2937"/>
+  <circle cx="74" cy="46" r="5" fill="#1F2937"/>
+  <circle cx="54" cy="45" r="2" fill="white"/>
+  <circle cx="74" cy="45" r="2" fill="white"/>
+  
+  <!-- 惊讶嘴巴 -->
+  <circle cx="64" cy="62" r="4" fill="#1F2937"/>
+  
+  <!-- 腮红 -->
+  <circle cx="46" cy="54" r="4" fill="#FECACA" opacity="0.6"/>
+  <circle cx="82" cy="54" r="4" fill="#FECACA" opacity="0.6"/>
+  
+  <!-- 发型 -->
+  <path d="M 36 40 Q 36 24 64 24 Q 92 24 92 40" fill="#1F2937"/>
+  <path d="M 36 40 L 28 52 L 36 64" fill="#1F2937"/>
+  <path d="M 92 40 L 100 52 L 92 64" fill="#1F2937"/>
+  
+  <!-- 装饰元素 - 闪电 -->
+  <polygon points="60,20 64,30 68,20 64,40" fill="#FBBF24"/>
+  
+  <!-- 文字 -->
+  <text x="64" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">SPEED</text>
+</svg>
