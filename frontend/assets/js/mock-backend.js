@@ -77,8 +77,10 @@ class MockBackend {
     insertSampleData() {
         const users = this.getTable('db_users');
         
-        // 如果已有用戶數據，跳過
-        if (users.length > 0) return;
+        // 如果已有用戶數據（至少有一个用户），跳過
+        if (users.length > 0) {
+            return;
+        }
 
         // 創建示例用戶
         const sampleUsers = [
@@ -404,6 +406,9 @@ class MockBackend {
         const userCopy = { ...user };
         delete userCopy.password;
         
+        // 保存用户信息到localStorage，供auth-module.js使用
+        localStorage.setItem('currentUser', JSON.stringify(userCopy));
+        
         return { code: 200, message: '登录成功 Login successful', user: userCopy };
     }
 
@@ -447,6 +452,8 @@ class MockBackend {
 
     async logout() {
         this.saveSession({});
+        // 清除localStorage中的用户信息
+        localStorage.removeItem('currentUser');
         return { code: 200, message: '已注销 Has been cancelled' };
     }
 

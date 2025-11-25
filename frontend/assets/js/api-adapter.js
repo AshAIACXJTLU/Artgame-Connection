@@ -212,7 +212,8 @@ const originalFetch = window.fetch;
 window.fetch = function(url, options) {
     // 如果是後端 API 調用，使用適配器
     if (typeof url === 'string' && url.includes('backend/api/api.php')) {
-        return window.apiAdapter.fetch(url, options);
+        // ensure options is an object to avoid reading properties of undefined
+        return window.apiAdapter.fetch(url, options || {});
     }
     // 其他調用使用原始 fetch
     return originalFetch.apply(this, arguments);

@@ -10,16 +10,22 @@ let currentUser = null;
  */
 async function initAuthFromServer() {
     try {
+        // 优先检查localStorage中的用户信息
+        const stored = JSON.parse(localStorage.getItem('currentUser') || 'null');
+        if (stored) {
+            currentUser = stored;
+            return true;
+        }
+        
+        // 如果没有存储的用户信息，调用whoami接口
         const res = await fetch('../backend/api/api.php?action=whoami');
         const data = await res.json();
         if (data.code === 200 && data.user) {
             currentUser = data.user;
             localStorage.setItem('currentUser', JSON.stringify(currentUser));
-        } else {
-            const stored = JSON.parse(localStorage.getItem('currentUser') || 'null');
-            currentUser = stored;
         }
     } catch (err) {
+        // 如果接口调用失败，再次检查localStorage
         const stored = JSON.parse(localStorage.getItem('currentUser') || 'null');
         currentUser = stored;
     }
