@@ -5,6 +5,9 @@ English
 
 This folder contains the frontend-only version of Artgame Connect — a static client you can open locally or serve via a simple static server. It's useful for demos, UI development, or when you want to run the client against a mock backend.
 
+Note about versions
+- This folder contains the frontend-only (mock backend) version. The full server version with a PHP backend is available in `../Artgame-Connect-v14`. The visual and interactive results are essentially the same between the two versions; the frontend-only copy simulates the backend for local demos.
+
 Project layout
 - `frontend/` - static client with HTML/CSS/JS
 - `frontend/assets/js/mock-backend.js` - an optional mock backend used by the client (if present)
@@ -23,6 +26,10 @@ python -m http.server 8080
 ```
 
 Then open `http://localhost:8080`.
+
+Quick Start (for non-developers)
+- Download or copy the `Artgame-Connect-v14-Frontend-Only` folder to your computer.
+- In your file manager, open the `frontend` folder and double-click `auth.html` (or `index.html`) to open it in your web browser. No installation or server is required for basic UI demos.
 
 Connecting to a real backend
 - By default the frontend may be configured to use a mock backend. To point it to a real API, edit `frontend/assets/js/api-adapter.js` and update the base URL and endpoints to your backend server.
@@ -47,6 +54,13 @@ Platform purpose — solving common pain points
 ----------------
 
 该目录为前端独立版本，包含静态客户端文件，适用于演示、界面开发或使用模拟后端时运行客户端。
+
+版本说明
+- 本目录为仅前端（模拟后端）版本。带后端的完整版本位于 `../Artgame-Connect-v14`。两者在界面和交互效果上基本一致，前端版本通过模拟后端以便本地演示。
+
+快速上手（面向非开发人员）
+- 下载或复制 `Artgame-Connect-v14-Frontend-Only` 文件夹到本地。
+- 在文件管理器中打开 `frontend` 文件夹，双击 `auth.html`（或 `index.html`）用浏览器打开即可。用于基本界面演示不需要安装或启动服务器。
 
 项目结构
 - `frontend/` - 静态客户端（HTML/CSS/JS）
